@@ -1,9 +1,10 @@
 import React from 'react';
 import VideoModel from './VideoModel'
 
-const VideoList = ({videos}) => {
+const VideoList = ({ handleSelectVideo, videos}) => {
+    
     const VideosList = videos.map((video) => {
-        return <VideoModel video={video}/>
+        return <VideoModel handleSelectVideo={handleSelectVideo} video={video}/>
     });
 
     return <div className='compiled_videos_list'>{VideosList}</div>;

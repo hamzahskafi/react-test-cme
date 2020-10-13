@@ -6,8 +6,10 @@ import VideoList from './VideoList'
 class Search extends Component{
 
     state = {
-        videos: []
+        videos: [],
+        selectedVideo: null
     }
+
     handleSubmit = async (termFromSearchBar) => {
         const response = await youtube.get('/search', {
             params: {
@@ -20,13 +22,17 @@ class Search extends Component{
         })
     };
 
+    handleSelectVideo = (video) => {
+        this.setState({ selectedVideo: video })
+    }
+
 
     render() {
         return (
             <div className="main_container">
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
                 <div className="video_list">
-                            <VideoList videos={this.state.videos}/>
+                            <VideoList handleSelectVideo={this.handleSelectVideo} videos={this.state.videos}/>
                     </div>
             </div>
         )
