@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VideoPreview = ({ video }) => {
-    if (video === null) {
+    if (video == null) {
       return <div className="video_placeholder">
             <h3>Click on a video result to preview here...</h3>
         </div>;

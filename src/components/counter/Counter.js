@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 class Counter extends Component{
     render(){
         return(
-            <div>
-                <h1>Counter Page</h1>
+            <div className="counter-container">
+                <button className="counter-control">&ndash;</button>
+                <span className="count">0</span>
+                <button className="counter-control" >+</button>
             </div>
         );
     }
