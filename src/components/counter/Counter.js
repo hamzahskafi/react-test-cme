@@ -13,10 +13,10 @@ class Counter extends Component{
 
     render(){
         return(
-            <div>
-                <button onClick={this.decrement}>&ndash;</button>
+            <div className="main_counter_container">
+                <button className="counter_button" onClick={this.decrement}>&ndash;</button>
                 <span className="count">{this.props.count}</span>
-                <button onClick={this.increment}>+</button>
+                <button className="counter_button" onClick={this.increment}>+</button>
             </div>
         );
     }
