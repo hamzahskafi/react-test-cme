@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar'
 import youtube from '../../api/youtube.js'
 import VideoList from './VideoList'
+import VideoPreview from './VideoPreview'
 
 class Search extends Component{
 
@@ -33,6 +34,9 @@ class Search extends Component{
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
                 <div className="video_list">
                             <VideoList handleSelectVideo={this.handleSelectVideo} videos={this.state.videos}/>
+                    </div>
+                <div className="video_preview">
+                        <VideoPreview video={this.state.selectedVideo}/>
                     </div>
             </div>
         )
