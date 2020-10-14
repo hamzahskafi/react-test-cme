@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import {createStore} from "redux";
 import { Provider } from 'react-redux';
+import CounterReducer from './components/counter/CounterReducer'
 
-const store = createStore();
+const store = createStore(CounterReducer);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
